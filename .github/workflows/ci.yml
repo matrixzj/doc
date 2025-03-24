@@ -46,7 +46,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.4"
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Bundle Install
         run: bundle install
@@ -62,7 +62,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby-version: ["3.4"]
+        ruby-version: ["3.3"]
     runs-on: ubuntu-latest
 
     steps:
