@@ -57,6 +57,10 @@ jobs:
         env:
           BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
 
+  check-current-user:
+    name: Check Current User
+    run: whoami
+
   validate:
     name: Validate HTML
     strategy:
