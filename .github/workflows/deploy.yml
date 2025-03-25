@@ -43,7 +43,7 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: github-pages
+      name: master
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: self-hosted
     needs: build
