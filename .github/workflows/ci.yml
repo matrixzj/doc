@@ -22,16 +22,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Bundle Install (Jekyll ${{ matrix.jekyll-version }})
         run: bundle install
-        env:
-          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
       - name: Init Search
         run: bundle exec rake search:init
-        env:
-          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
       - name: Build Site
         run: bundle exec jekyll build
-        env:
-          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
 
   github-pages-build:
     name: Build (github-pages gem)
